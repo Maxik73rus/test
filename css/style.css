@@ -1,0 +1,668 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../images/school3.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro_inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../images/class3.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__title {
+    color: LightSalmon;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+
+    background-color: #fff;
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: #fff;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+
+/* Nav */
+
+.box_nav{
+    width: auto;
+    min-width: 400px;
+    background-color: grey;
+    border: 2px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 0;
+    opacity: 0.8;
+}
+.nav {
+    width: auto;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fce38a;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: #fce38a;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #fce38a;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border: 3px solid #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.bt {
+    position: absolute;
+    bottom:15%;
+    left: 45%;
+    
+}
+
+.btn_2 {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 8px 30px;
+
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: grey;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn_2:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+/* Slider */
+.slider {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0;
+    position: relative;
+
+    border-top: 3px solid #fff;
+    opacity: .7;
+
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+    border-top: 20px solid #fff;
+}
+
+.slider__item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 20px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.back {
+    height: auto;
+    width: 100%;
+    font-size: 15px;
+    background: url("../images/bridge22.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.back__title {
+    font-family: 'Gabriola';
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    /*font-weight: 700;*/
+    line-height: 1;
+}
+
+.back__title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: red;
+}
+
+.centkontainer {
+    text-align: center;
+    font-family: 'Times New Roman';
+     display:grid;
+    place-content:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.centkontainer_2 {
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-size: 24px;
+     display:grid;
+    place-content:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.adv_cont {
+    text-align: center;
+    font-family: 'Times New Roman';
+    text-decoration-style: solid;
+    font-size: 20px;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.h2_class {
+    font-size: 25px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.decoration {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 2px;
+    background-color: bisque;
+    text-align: left;
+    font-size: 14px;
+    z-index: 3;
+}
+
+.box_decor {
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height:auto;
+    border-bottom: 3px;
+    border-bottom-color: black;
+    border-radius: 15px;
+    background-color:white;
+    z-index: 2;
+}
+
+.back {
+    height: auto;
+    width: 100%;
+    font-size: 15px;
+    background-color: bisque;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.back__title {
+    font-family: 'Gabriola';
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    /*font-weight: 700;*/
+    line-height: 1;
+}
+
+.back__title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: red;
+}
+
+
+.im {
+    border-radius: 10px;
+}
+
+.a_point {
+    text-decoration-color: blue;
+    pointer-events:none;
+}
+
+.a_point:hover {
+    color: red;
+}
+
+
+.demo_2 {
+    max-width: 960px;
+    mask: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+    padding: 50px 0;
+    
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 248, 220, 0.9) 0%, rgba(255, 248, 220, 0.9) 25%, rgba(255, 248, 220, 0.9) 75%, rgba(255, 248, 220, 0.9) 100%);
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    border-radius: 10px 10px 10px 10px;
+    
+    display: inline-block;
+    
+    padding: 20px;
+    font-family: 'Trade Winds', cursive;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.wrapper {
+    display: inline-block;
+    max-width: 860px;
+    max-height: 1000px;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 55px;
+    margin-right: 50px;
+}
+
+#left, #right, #main {
+    height: 100%;
+    float: left;
+}
+
+
+
+#main {
+    max-width: 700px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    margin: 0px 0px 0px 0px;
+}
+
+
+#left, #right {
+    width: 50px;
+    margin-top: 225px;
+}
+
+#mainImg {
+    height: 100%;
+}
+
+#main div {
+    height: 100%;
+    float: left;
+    width: 100%;
+}
+
+
+/*здесь начинается код слайдера для фотоальбома*/
+
+.w {
+  width:200vmin;
+  height:110vmin;
+}
+
+.ts {
+  width:100%; height:100%;
+  position:relative;
+  --barH:10%;/*active zone height = 100% - barH*/
+}
+
+.t {
+  --w:20%;
+  display:block; width:var(--w); height:var(--barH);
+  position:absolute; bottom:0; left:var(--l);
+  -webkit-transform-origin:top left;
+          transform-origin:top left;
+}
+
+.t img {
+  dislay:block; width:100%; height:100%;
+  -o-object-fit:cover;
+     object-fit:cover;
+  -webkit-transform:scale(0.8);
+          transform:scale(0.8);
+}
+
+[type="radio"] { 
+  display:none; 
+}
+
+:checked + label.t {
+  left:0; bottom:var(--barH);
+  width:100%; height:calc(100% - var(--barH));
+}
+
+:checked + label.t img {
+  -o-object-fit:contain;
+     object-fit:contain;
+}
+
+/* 
+optional
+*/
+
+.ts {/*thumbnails bar*/
+  -webkit-perspective:100px;
+          perspective:100px;
+  -webkit-perspective-origin:center center;
+          perspective-origin:center center;
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+  pointer-events:none;
+}
+
+.ts:after {/*the plate*/
+  content:"";
+  display:block; width:100%; height:15px;
+  position:absolute; bottom:0;
+  background:linear-gradient(transparent 20%, rgba(0,0,0,0.1));
+  -webkit-transform:rotateX(90deg)scaleX(1.2);
+          transform:rotateX(90deg)scaleX(1.2);
+  -webkit-transform-origin:bottom center;
+          transform-origin:bottom center;
+}
+
+:not(:checked) + .t {/*inactive labels*/
+  -webkit-transform:translate3d(0, 0, -5px);
+          transform:translate3d(0, 0, -5px);
+  pointer-events:auto;
+}
+
+:not(:checked) + .t:hover {
+  -webkit-transform:translate3d(0, -7px, -5px);
+          transform:translate3d(0, -7px, -5px);
+  box-shadow:0 30px 30px -25px rgba(0,0,0,0.3);
+  cursor:pointer;
+}
+
+:not(:checked) + .t img {
+  -webkit-transform:scale(0.9);
+          transform:scale(0.9);/*create gaps*/
+}
+
+:checked + .t {/*active label*/
+  box-shadow:0 0 0 transparent;
+  -webkit-animation:anim 2s 1;
+          animation:anim 2s 1;
+} @-webkit-keyframes anim {
+  from { -webkit-transform:rotateY(6deg)rotateX(3deg); transform:rotateY(6deg)rotateX(3deg) }
+} @keyframes anim {
+  from { -webkit-transform:rotateY(6deg)rotateX(3deg); transform:rotateY(6deg)rotateX(3deg) }
+}
+
+/* 
+transitions
+*/
+.t {/*active->inactive & hover->rest*/
+  transition:bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s, -webkit-transform 0.5s;
+  transition:transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+  transition:transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s, -webkit-transform 0.5s;
+}
+.t:hover, :checked + .t {
+  transition:bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s, -webkit-transform 0.5s;
+  transition:transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+  transition:transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s, -webkit-transform 0.5s;
+}
+
+.dark_box {
+    background-color: black;
+    width: auto;
+    height: auto;
+}
+
+
+#gallery {
+  -moz-user-select: none; user-select: none;
+    margin-top: 30px;  
+}
+#gallery img {
+  max-width: 340px;
+  max-height: 200px;
+  cursor: zoom-in;
+}
+#gallery img:focus {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 31;
+  max-width: 100%;
+  max-height: 100%;
+  outline: none;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-user-select: none; user-select: none;
+}
+#gallery img:focus ~ div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background: rgba(240,240,240,.9);
+  cursor: zoom-out;
+}
+
+.tx_box {
+    margin-left: 10%;
+    background-color: grey;
+    color: #fff;
+    border: 3px;
+    border-radius: 10px;
+    height:auto;
+    width:80%;
+}
+
+
+/*для картинок*/
+
+.back_2 {
+    width:100%;
+    height:100%;
+    background-color: Salmon;
+}
+
+.back_3 {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px;
+    border-color: black;
+    background-color: SandyBrown;
+}
+
+.zag {
+    font-size: 50px;
+}
+
+.im {
+    width: 350px;
+    height: 250px;
+}
